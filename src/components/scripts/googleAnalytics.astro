@@ -1,0 +1,13 @@
+---
+// Google Analytics (gtag.js) tracking script
+import { googleAnalyticsMeasurementID } from '../../../src/config/analytics'
+---
+
+<!-- Google tag (gtag.js) -->
+<script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsMeasurementID}`}></script>
+<script is:inline define:vars={{ googleAnalyticsMeasurementID }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', googleAnalyticsMeasurementID);
+</script>
