@@ -16,7 +16,7 @@ export const socialLinks: SocialLink[] = [
 	},
 	{
 		name: 'x',
-		link: '/',
+		link: 'https://x.com/RompusHealth',
 		icon: 'x-icon'
 	},
 	{
