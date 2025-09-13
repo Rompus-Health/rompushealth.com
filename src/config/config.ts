@@ -21,9 +21,9 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle: 'Foxi. Tailwind CSS Astro Starter Kit by Oxygenna',
+	siteTitle: 'Rompus Health | Intelligent Prior Authorization Solution for Oncology',
 	siteDescription:
-		'Foxi is a design and development agency that specializes in creating beautiful and functional websites.',
+		'Rompus Health is a AI Clinical Decision Support Software built for oncology practices to deliver guideline concordant care and streamline prior authorization',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo.svg',
