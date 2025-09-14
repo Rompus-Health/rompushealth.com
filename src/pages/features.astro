@@ -10,10 +10,10 @@ import Hero from '../components/blocks/hero/PageHeader.astro'
 // Data
 import featuresData from '../data/json-files/featuresData.json'
 // - Feature Categories
-const featuresAnalytics = featuresData.filter((feature) => feature.category === 'Analytics')
-const featuresProductivity = featuresData.filter((feature) => feature.category === 'Productivity')
+const featuresAnalytics = featuresData.filter((feature) => feature.category === 'Authorization')
+const featuresProductivity = featuresData.filter((feature) => feature.category === 'Pathways')
 const featuresSecurity = featuresData.filter((feature) => feature.category === 'Security')
-const featuresIntegrations = featuresData.filter((feature) => feature.category === 'Integrations')
+//const featuresIntegrations = featuresData.filter((feature) => feature.category === 'Integrations')
 //const featuresSupport = featuresData.filter((feature) => feature.category === 'Support')
 
 // Content
@@ -26,35 +26,35 @@ const SEO = {
 // - Page Header
 const header = {
 	title: 'Why you and your team will <strong>love</strong> Rompus',
-	text: 'Submit, track, and manage all prior authorizations in one simple platform'
+	text: "Submit, track, and manage all prior authorizations in one simple platform"
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero title={header.title} text={header.text} />
 	<Feature
-		title="Insightful Analytics"
-		text="Delve into your data with precision and uncover actionable insights."
+		title="Automated Prior Authorization"
+		text="Follows HL7 Da Vinci requirements. Collect evidence. Submit over FHIR. NO fax portals."
 		data={featuresAnalytics}
 	/>
 	<Feature
-		title="Efficiency Unleashed"
-		text="Streamline tasks and focus on what matters with tools designed to boost your productivity."
-		data={featuresSecurity}
+		title="Standardized Clinical Pathways"
+		text="Build guideline‑concordant pathways. Check plan conformance. Auto‑assign tasks to Clinicians, Physicists, and Billing."
+		data={featuresProductivity}
 		classes="bg-neutral-50 dark:bg-neutral-900"
 	/>
 	<Feature
-		title="Ultimate Data Protection"
-		text="Keep your data safe with top-notch security measures and real-time threat detection."
-		data={featuresProductivity}
+		title="Privacy and Security"
+		text="Local LLM processing keeps PHI inside your network with role-based access and full audit trails."
+		data={featuresSecurity}
 	/>
-	<Feature
+	<!--<Feature
 		title="Seamless Connectivity"
 		text="Effortlessly connect your favorite apps and automate workflows for a smoother workday."
 		data={featuresIntegrations}
 		classes="bg-neutral-50 dark:bg-neutral-900"
 	/>
-	<!--<Feature
+	<Feature
 		title="24/7 Expert Help"
 		text="Our friendly support team is always here to assist you with any questions or issues."
 		data={featuresSupport}
