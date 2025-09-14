@@ -43,14 +43,14 @@ export const navigationBarData: NavData = {
 		{ name: 'Features', link: '/features' },
 		{ name: 'Blog', link: '/blog' },
 		{ name: 'FAQ', link: '/faq' },
-		{
+		/*{
 			name: 'Resources',
 			link: '#',
 			submenu: [
 				{ name: 'Changelog', link: '/changelog' },
 				{ name: 'Terms', link: '/terms' }
-			]
-		},
+			
+		}*/
 		{ name: 'Contact', link: '/contact' }
 	],
 	navActions: [{ name: 'Get in touch', link: '/contact', style: 'primary', size: 'lg' }]
