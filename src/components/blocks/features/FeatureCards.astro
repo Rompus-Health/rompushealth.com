@@ -16,8 +16,8 @@ import Card from '../../ui/cards/FeatureCard.astro'
 import feature01 from '../../../assets/cards/feature-01.svg'
 import feature02 from '../../../assets/cards/feature-02.svg'
 import feature03 from '../../../assets/cards/feature-03.svg'
-// import feature04 from '../../../assets/cards/feature-04.svg'
-// import feature05 from '../../../assets/cards/feature-05.svg'
+import feature04 from '../../../assets/cards/feature-04.svg'
+import feature05 from '../../../assets/cards/feature-05.svg'
 ---
 
 <Section id="features">
@@ -33,7 +33,7 @@ import feature03 from '../../../assets/cards/feature-03.svg'
 	<Row>
 		<Col span="4">
 			<Card
-				title="All your data in one place"
+				title="All your billing & clinical data in one place"
 				subtitle="Pulls EMR, OIS, imaging, and labs into a unified mCODE profile for each patient—no more hunting across systems."
 				image={feature01}
 				link="/features"
@@ -41,31 +41,31 @@ import feature03 from '../../../assets/cards/feature-03.svg'
 		</Col>
 		<Col span="4" classes="flex flex-col gap-6">
 			<Card
-				title="Organize & manage your projects "
-				subtitle=" Built-in tasking assigns plan checks, approvals, and hand‑offs to the right role at the right time."
+				title="Organize & manage your authorizations"
+				subtitle="Submit, track, and manage all prior authorizations in one simple platform."
 				image={feature02}
 				link="/features"
 			/>
 			<Card
-				title="Keep your team connected"
+				title="Keep your team organzed with real time authorization status"
 				subtitle="Real‑time status for authorizations, plan conformance, and documentation requests keeps clinical and billing teams aligned."
 				image={feature03}
 				link="/features"
 			/>
 		</Col>
-		<!-- <Col span="4" classes="flex flex-col gap-6">
+		<Col span="4" classes="flex flex-col gap-6">
 			<Card
-				title="Manage your customers"
-				subtitle="Build and nurture customer relationships with our powerful CRM system. "
+				title="Manage your clinical pathways"
+				subtitle="Build guideline‑concordant pathways. Check plan conformance. Auto‑assign tasks to Clinicians, Physicists, and Billing."
 				image={feature04}
 				link="/features"
 			/>
 			<Card
 				title="Simplify your financial operations"
-				subtitle="Streamline your billing process with our easy-to-use invoicing tool. Create, send, and track invoices effortlessly."
+				subtitle="Streamline your billing process with our easy-to-use tool. Create, send, and track authorizations effortlessly."
 				image={feature05}
 				link="/features"
 			/>
-		</Col>-->
+		</Col>
 	</Row>
 </Section>
