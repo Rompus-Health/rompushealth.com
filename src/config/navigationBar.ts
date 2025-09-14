@@ -51,7 +51,7 @@ export const navigationBarData: NavData = {
 				{ name: 'Terms', link: '/terms' }
 			]
 		},
-		{ name: 'Contact', link: '/contact' }
+		//{ name: 'Contact', link: '/contact' }
 	],
-	navActions: [{ name: 'Get in touch', link: '/contact', style: 'primary', size: 'lg' }]
+	navActions: [{ name: 'Get In Touch', link: '/contact', style: 'primary', size: 'lg' }]
 }
