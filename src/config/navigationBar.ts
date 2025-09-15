@@ -42,15 +42,16 @@ export const navigationBarData: NavData = {
 		// { name: 'Pricing', link: '/pricing' },
 		{ name: 'Features', link: '/features' },
 		{ name: 'Blog', link: '/blog' },
-		{ name: 'FAQ', link: '/faq' },
-		{
-			name: 'Resources',
-			link: '#',
-			submenu: [
-				{ name: 'Changelog', link: '/changelog' },
-				{ name: 'Terms', link: '/terms' }
-			]
-		},
+		// { name: 'FAQ', link: '/faq' },
+		{ name: 'Terms', link: '/terms' }
+//		{
+//			name: 'Resources',
+//			link: '#',
+//			submenu: [
+//				{ name: 'Changelog', link: '/changelog' },
+//				{ name: 'Terms', link: '/terms' }
+//			]
+//		},
 		//{ name: 'Contact', link: '/contact' }
 	],
 	navActions: [{ name: 'Get In Touch', link: '/contact', style: 'primary', size: 'lg' }]
