@@ -5,13 +5,13 @@ import Layout from '../layouts/Layout.astro'
 // - UI
 import FormHero from '../components/blocks/hero/ContactHero.astro'
 // import CTA from '../components/blocks/CTA/BasicDark.astro'
-// import ContactCards from '../components/blocks/contact/ContactCards.astro'
+import ContactCards from '../components/blocks/contact/ContactCards.astro'
 // import SocialProof from '../components/blocks/socialproof/Basic.astro'
 
 // Content
 // - SEO
 const SEO = {
-	title: 'Rompus| Get in Touch with Us',
+	title: 'Rompus | Get in Touch with Us',
 	description:
 		 "Have a question? Need support? Looking for a demo? We're here. Reach out to us and we'll get back to you as soon as possible."
 }
@@ -23,13 +23,14 @@ const header = {
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
+	
 	<FormHero
 		title={header.title}
 		text={header.text}
 		id="contact"
 		classes="bg-neutral-50 dark:bg-neutral-950/80"
 	/>
-	<!--<ContactCards classes="dark:bg-neutral-950/80" />
-	<SocialProof classes="dark:bg-neutral-950/80" />
+	<ContactCards classes="dark:bg-neutral-950/80" />
+<!-- 	<SocialProof classes="dark:bg-neutral-950/80" />
 	<CTA /> -->
 </Layout>
