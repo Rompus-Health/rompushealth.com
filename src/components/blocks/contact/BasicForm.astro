@@ -1,44 +1,39 @@
 ---
 // Basic Contact Form
 // ------------
-// Description: A basic contact form with fields for first name, last name, email, phone number and message.
+// Description: A basic contact form using Formbricks JS SDK.
 // Properties:
 // - classes: Additional classes to be added to the block
 // ------------
 
-// Components
-// - UI
 import Card from '../../ui/cards/partials/Card.astro'
 import CardBody from '../../ui/cards/partials/CardBody.astro'
-import Form from '../../ui/forms/Form.astro'
-import FormField from '../../ui/forms/partials/FormField.astro'
-import InputField from '../../ui/forms/form-elements/InputField.astro'
-import TextArea from '../../ui/forms/form-elements/TextArea.astro'
-import Button from '../../ui/Button.astro'
 
 // Props
 type Props = {
-	classes?: string
+    classes?: string
 }
 const { classes } = Astro.props
 ---
 
 <Card classes={classes}>
-	<CardBody>
-		<Form>
-			<h2 class="text-2xl">Get in Touch</h2>
-			<FormField>
-				<InputField type="text" id="firstName" label="First Name" />
-				<InputField type="text" id="lastName" label="Last Name" />
-			</FormField>
-			<FormField>
-				<InputField type="email" id="email" label="Email" required value="name@youremail.com" />
-			</FormField>
-			<FormField>
-				<InputField type="tel" id="phone" label="phone number" />
-			</FormField>
-			<FormField><TextArea id="message" label="Your Message" /></FormField>
-			<Button style="primary" type="submit">Submit</Button>
-		</Form>
-	</CardBody>
+    <CardBody>
+        <div id="formbricks-form-card" class="min-h-[300px]"></div>
+    </CardBody>
 </Card>
+
+<script type="module">
+    import formbricks from "https://unpkg.com/@formbricks/js@latest/dist/index.js";
+    
+    // Wait for the DOM to be ready
+    document.addEventListener('DOMContentLoaded', async () => {
+        // Initialize Formbricks
+        await formbricks.init({
+            environmentId: "cmfk9bhq23zgmz201gcady8lr",
+            apiHost: "https://app.formbricks.com",
+        });
+
+        // Display the survey in the card
+        formbricks.display("cmfk9ptj11shzxs01tw1ngjm6", "formbricks-form-card");
+    });
+</script>

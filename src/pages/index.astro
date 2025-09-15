@@ -5,16 +5,16 @@ import Layout from '../layouts/Layout.astro'
 // - UI
 import Hero from '../components/blocks/hero/HomeCTA.astro'
 import Features from '../components/blocks/features/FeatureCards.astro'
-import Testimonial from '../components/blocks/testimonials/BasicDark.astro'
+//import Testimonial from '../components/blocks/testimonials/BasicDark.astro'
 import HighlightBlocks from '../components/blocks/highlights/HightlightRows.astro'
-import CTA from '../components/blocks/CTA/BasicDark.astro'
+//import CTA from '../components/blocks/CTA/BasicDark.astro'
 
 // Content
 // - Testimonial background
 import testimonialBackground from '../assets/testimonial-bg-01.webp'
 // - SEO
 const SEO = {
-	title: 'Rompus Health | Intelligent Prior Authorization Solutions',
+	title: 'Rompus Health | Intelligent Prior Authorization Solution for Oncology',
 	description:
 		'Rompus Health is a AI Clinical Decision Support Software built for oncology practices to deliver guideline concordant care and streamline prior authorization',
 }
@@ -23,7 +23,7 @@ const SEO = {
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero />
 	<Features />
-	<Testimonial bg={testimonialBackground} bgPosition="right" />
+	<!-- <Testimonial bg={testimonialBackground} bgPosition="right" />-->
 	<HighlightBlocks />
-	<CTA />
+	<!-- <CTA />-->
 </Layout>

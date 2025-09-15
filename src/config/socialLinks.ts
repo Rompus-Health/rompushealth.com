@@ -10,18 +10,18 @@ export interface SocialLink {
 
 export const socialLinks: SocialLink[] = [
 	{
-		name: 'facebook',
-		link: '/',
-		icon: 'fb-icon'
+		name: 'linkedin',
+		link: 'https://www.linkedin.com/company/rompus-health/',
+		icon: 'linkedin-icon'
 	},
 	{
-		name: 'twitter',
-		link: '/',
-		icon: 'twitter-icon'
+		name: 'x',
+		link: 'https://x.com/RompusHealth',
+		icon: 'x-icon'
 	},
 	{
-		name: 'discord',
-		link: '/',
-		icon: 'discord-icon'
+		name: 'github',
+		link: 'https://github.com/Rompus-Health/',
+		icon: 'github-icon'
 	}
 ]

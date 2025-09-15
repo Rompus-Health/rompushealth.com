@@ -40,8 +40,10 @@ const savedNavActions = navActions.map((action) => ({
 		<nav aria-label="main navigation" role="navigation" class="header__nav">
 			<!-- Logo -->
 			<a href="/" class="header__logo">
-				<img src={logo.src} alt={logo.alt} width="48" height="48" />
-				<span>{logo.text}</span>
+				<img src={logo.src}
+				alt={logo.alt} 
+				style="max-height: 5rem; width: 180px; height: auto; object-fit: contain;" />
+				<!-- <span>{logo.text}</span> -->
 			</a>
 
 			<!-- Menu toggle -->
@@ -107,7 +109,7 @@ const savedNavActions = navActions.map((action) => ({
 			<div class="header__actions">
 				{
 					savedNavActions.map((action) => (
-						<Button classes="flex-auto" size={action.size} style={action.style} modal="signup">
+						<Button classes="flex-auto" size={action.size} style={action.style} link={action.link}>
 							{action.name}
 						</Button>
 					))

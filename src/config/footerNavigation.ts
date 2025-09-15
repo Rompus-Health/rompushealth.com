@@ -35,13 +35,13 @@ export interface FooterData {
 
 export const footerNavigationData: FooterData = {
 	footerAbout: {
-		title: 'Foxi.',
+		title: 'Rompus Health',
 		aboutText:
-			'Expertly made, responsive, accessible components in React and HTML ready to be used on your website or app. Just copy and paste them on your Tailwind CSS project.',
+			'Rompus Health is a AI Clinical Decision Support Software built for oncology practices to deliver guideline concordant care and streamline prior authorization',
 		logo: {
 			src: '/logo.svg',
-			alt: 'The tailwind astro theme',
-			text: 'Foxi.'
+			alt: 'End to End Prior Authorization for Oncology',
+			text: 'Rompus'
 		}
 	},
 	footerColumns: [
@@ -56,10 +56,10 @@ export const footerNavigationData: FooterData = {
 					subCategory: 'FAQ',
 					subCategoryLink: '/faq'
 				},
-				{
-					subCategory: 'Pricing',
-					subCategoryLink: '/pricing'
-				},
+//				{
+//					subCategory: 'Pricing',
+//					subCategoryLink: '/pricing'
+//				},
 				{
 					subCategory: 'Changelog',
 					subCategoryLink: '/changelog'
@@ -106,6 +106,6 @@ export const footerNavigationData: FooterData = {
 		}
 	],
 	subFooter: {
-		copywriteText: '© Foxi 2024.'
+		copywriteText: '© Rompus Health 2025.'
 	}
 }
