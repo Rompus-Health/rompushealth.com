@@ -56,10 +56,10 @@ export const footerNavigationData: FooterData = {
 					subCategory: 'FAQ',
 					subCategoryLink: '/faq'
 				},
-				{
-					subCategory: 'Pricing',
-					subCategoryLink: '/pricing'
-				},
+//				{
+//					subCategory: 'Pricing',
+//					subCategoryLink: '/pricing'
+//				},
 				{
 					subCategory: 'Changelog',
 					subCategoryLink: '/changelog'
@@ -106,6 +106,6 @@ export const footerNavigationData: FooterData = {
 		}
 	],
 	subFooter: {
-		copywriteText: '© Rompus Health 2024.'
+		copywriteText: '© Rompus Health 2025.'
 	}
 }
