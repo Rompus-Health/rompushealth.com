@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro'
 import FormHero from '../components/blocks/hero/ContactHero.astro'
 // import CTA from '../components/blocks/CTA/BasicDark.astro'
 import ContactCards from '../components/blocks/contact/ContactCards.astro'
-// import SocialProof from '../components/blocks/socialproof/Basic.astro'
+//import SocialProof from '../components/blocks/socialproof/Basic.astro'
 
 // Content
 // - SEO
@@ -31,6 +31,29 @@ const header = {
 		classes="bg-neutral-50 dark:bg-neutral-950/80"
 	/>
 	<ContactCards classes="dark:bg-neutral-950/80" />
-<!-- 	<SocialProof classes="dark:bg-neutral-950/80" />
+ 	<!--<SocialProof classes="dark:bg-neutral-950/80" />
 	<CTA /> -->
+	<!-- Add this where you want the form to appear -->
+	<div id="formbricks-form-card" class="min-h-[300px]"></div>
 </Layout>
+
+<script>
+  // Load Formbricks JS library
+  (function() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.async = true;
+    script.src = "https://app.unpkg.com/@formbricks/js@4.1.0/files/dist/index.js"; // use stable CDN URL
+    script.onload = function() {
+      if (window.formbricks) {
+        window.formbricks.init({
+          environmentId: "cmfk9bhq23zgmz201gcady8lr", // your env ID
+          apiHost: "https://app.formbricks.com"
+        });
+        // Render the survey (replace with your survey ID)
+        window.formbricks.renderSurvey("YOUR_SURVEY_ID", "formbricks-form-card");
+      }
+    };
+    document.head.appendChild(script);
+  })();
+</script>
