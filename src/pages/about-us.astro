@@ -1,0 +1,146 @@
+---
+// Components
+import Layout from '../layouts/Layout.astro'
+
+// SEO
+const SEO = {
+  title: 'Rompus Health | About Us',
+  description:
+    'Meet the Rompus Health team — innovators, clinicians, and advisors building AI solutions for oncology prior authorization and clinical decision support.',
+}
+
+// Team data
+const team = [
+  {
+    name: 'Sandeepan Ganguly',
+    bio: 'Medical Physics Resident and founder passionate about timely access to cancer care.',
+  },
+  {
+    name: 'Vivek Anand',
+    bio: 'Physicist with expertise in AI, imaging, and decision support.',
+  },
+  {
+    name: 'Ashutosh Yaligar',
+    bio: 'Healthcare operations leader & MD Candidate experienced in digital health scaling.',
+  },
+  {
+    name: 'Kritika Subramanian',
+    bio: 'Dual Boarded Physician-Scientist focused on technology-driven patient care in radiation oncology.',
+  },
+]
+
+// Clinical Advisors
+const clinical_advisors = [
+  { name: 'Sunit P. Jariwala, MD' },
+]
+
+// Technical Advisors
+const technical_advisors = [
+  { name: 'Amar Basavatia' },
+]
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+  <section class="about container">
+    <h1 class="page-title">About Us</h1>
+    <p class="intro">
+      At Rompus Health, we’re on a mission to streamline oncology prior authorization with 
+      intelligent AI-driven solutions. Our team brings together expertise in oncology, 
+      artificial intelligence, and healthcare operations to deliver faster, guideline-concordant care.
+    </p>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team container">
+    <h2 class="section-title">Our Team</h2>
+    <div class="card-grid">
+      {team.map((member) => (
+        <div class="card">
+          <img src={member.image} alt={member.name} class="photo" />
+          <h3>{member.name}</h3>
+          <p class="bio">{member.bio}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Clinical Advisors Section -->
+  <section class="advisors container">
+    <h2 class="section-title">Clinical Advisors</h2>
+    <div class="card-grid">
+      {clinical_advisors.map((advisor) => (
+        <div class="card advisor-card">
+          <h3>{advisor.name}</h3>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Technical Advisors Section -->
+  <section class="advisors container">
+    <h2 class="section-title">Technical Advisors</h2>
+    <div class="card-grid">
+      {technical_advisors.map((advisor) => (
+        <div class="card advisor-card">
+          <h3>{advisor.name}</h3>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .page-title {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro {
+    font-size: 1.125rem;
+    color: #555;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .card-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .advisor-card {
+    border: 2px solid #f0f0f0;
+    background: #fafafa;
+  }
+
+  .photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .bio {
+    font-size: 0.95rem;
+    color: #666;
+  }
+</style>
