@@ -34,29 +34,70 @@ const header = {
  	<!--<SocialProof classes="dark:bg-neutral-950/80" />
 	<CTA /> -->
 	<!-- Add this where you want the form to appear -->
-	<div id="formbricks-form-card" class="min-h-[300px]"></div>
+	<div id="formbricks-form-card" class="min-h-[300px]"><script type="module">
+    // Import the module directly. This is the correct way.
+    import formbricks from "https://unpkg.com/@formbricks/js@4.1.0/dist/index.js";
+
+    // Now you can use the imported 'formbricks' object
+    if (formbricks) {
+      formbricks.setup({
+        environmentId: "cmfk9bhq23zgmz201gcady8lr",
+        appUrl: "https://app.formbricks.com"
+      });
+
+      // Example: Track an event to trigger a survey
+      formbricks.track("Page Loaded");
+    } else {
+      console.error("Failed to load Formbricks module.");
+    }
+  </script></div>
 </Layout>
 
-<script>
+
+<!-- <html>
+<head>
+  <title>Formbricks Implementation</title>
+</head>
+<body>
+  <h1>My App</h1>
+  <p>A survey may appear here.</p>-->
+
+  <!-- Make sure your script has type="module" 
+  
+
+</body>
+</html>-->
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script type ="module">
   // Load Formbricks JS library
   (function() {
     var script = document.createElement("script");
     script.type = "text/javascript";
     script.async = true;
-    script.src = "https://app.unpkg.com/@formbricks/js@4.1.0/files/dist/index.js"; // use stable CDN URL
+    script.src = "https://unpkg.com/@formbricks/js@4.1.0/dist/index.js"; 
     script.onload = function() {
       if (window.formbricks) {
-        window.formbricks.init({
+        window.formbricks.setup({
           environmentId: "cmfk9bhq23zgmz201gcady8lr",
-          apiHost: "https://app.formbricks.com"
+          appURL: "https://app.formbricks.com"
         });
-        // Render the survey (replace with your survey ID)
-        window.formbricks.renderSurvey("YOUR_SURVEY_ID", "formbricks-form-card");
+        /* Render the survey (replace with your survey ID)
+        window.formbricks.renderSurvey("YOUR_SURVEY_ID", "formbricks-form-card");*/
       }
     };
     document.head.appendChild(script);
   })();
-</script>
+</script>-->
 
 
 <!--THE ERROR IN THE BROWSER CONSOLE-->
