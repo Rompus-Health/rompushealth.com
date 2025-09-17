@@ -75,7 +75,7 @@ export const footerNavigationData: FooterData = {
 			subCategories: [
 				{
 					subCategory: 'About us',
-					subCategoryLink: '/'
+					subCategoryLink: '/about-us'
 				},
 				{
 					subCategory: 'News',
