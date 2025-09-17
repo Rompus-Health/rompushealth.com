@@ -21,11 +21,11 @@ const team = [
   },
   {
     name: 'Ashutosh Yaligar',
-    bio: 'Healthcare operations leader & MD Candidate experienced in digital health scaling.',
+    bio: 'Healthcare operations leader experienced in digital health scaling.',
   },
   {
     name: 'Kritika Subramanian',
-    bio: 'Dual Boarded Physician-Scientist focused on technology-driven patient care in radiation oncology.',
+    bio: 'Physician focused on technology-driven patient care in oncology.',
   },
 ]
 
@@ -56,7 +56,6 @@ const technical_advisors = [
     <div class="card-grid">
       {team.map((member) => (
         <div class="card">
-          <img src={member.image} alt={member.name} class="photo" />
           <h3>{member.name}</h3>
           <p class="bio">{member.bio}</p>
         </div>
@@ -129,14 +128,6 @@ const technical_advisors = [
   .advisor-card {
     border: 2px solid #f0f0f0;
     background: #fafafa;
-  }
-
-  .photo {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1rem;
   }
 
   .bio {
